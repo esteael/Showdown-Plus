@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Showdown+",
+  "version": "1.0",
+  "description": "A quality of life extension for Pokémon Showdown.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+      {
+          "matches": ["https://play.pokemonshowdown.com/*"],
+          "js": ["content.js"]
+      }
+  ],
+  "icons": {
+      "48": "icon.png"
+  },
+  "web_accessible_resources": [
+      "showdownlogo.svg"
+  ]
+}
