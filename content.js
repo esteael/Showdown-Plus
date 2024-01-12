@@ -263,7 +263,15 @@ window.onload = applyAllChanges;
 
 // Auto-Close "News."
 
-// Replace the site's favicon with our own.
+// Replace the site's favicon with our own. (I think we need to
+// update to a different manifest version to do this, but I might
+// wrong.)
+
+// Properly implement the avatar changing system. Save all avatars
+// to a backup folder, and delete them whenever the user presses
+// the "fa fa-trash" icon next to it in the menu. We can use the 
+// button on the bottom of the screen to tell the program where
+// to put the "next" avatar.
 
 // Add way to add custom accent colors.
 
