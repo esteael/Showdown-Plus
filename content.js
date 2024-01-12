@@ -268,3 +268,11 @@ window.onload = applyAllChanges;
 // Add way to add custom accent colors.
 
 // Upgrade from Manifest 2.0
+
+// Add support for custom avatars.
+
+// Smogon+.
+
+// Custom Command Support.
+
+// Self Analysis button.
