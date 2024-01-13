@@ -284,3 +284,5 @@ window.onload = applyAllChanges;
 // Custom Command Support.
 
 // Self Analysis button.
+
+// Black and White Scaling
