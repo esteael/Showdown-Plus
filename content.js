@@ -1,4 +1,9 @@
 window.onload =  function() {
+
+  console.log('Page loaded');
+  console.log('UIManager:', window.UIManager);
+  console.log('UserPrefManager:', window.UserPrefManager);
+
   window.UIManager.replaceLogo();
   window.UIManager.makeBarSmaller();
   window.UIManager.adjustTabBarMargin();

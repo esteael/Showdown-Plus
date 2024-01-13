@@ -134,3 +134,5 @@ window.UIManager = (function() {
     addCustomButton: addCustomButton
 };
 })();
+
+console.log('UIManager loaded:', window.UIManager);
