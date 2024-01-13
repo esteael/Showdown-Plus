@@ -11,7 +11,8 @@ const battleManager = new battleManager();
 
 uiManager.replaceLogo();
 userPrefManager.changeTextColor();
-pokemonManager.ClickAnalysis();
+battleManager.ClickAnalysis();
+battleManager.pokemonClickListener();
 
 function applyAllChanges() {
   uiManager.applyAllChanges();
