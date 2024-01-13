@@ -13,6 +13,14 @@ uiManager.replaceLogo();
 userPrefManager.changeTextColor();
 pokemonManager.ClickAnalysis();
 
+function applyAllChanges() {
+  uiManager.applyAllChanges();
+}
+
+const observer = new MutationObserver(applyAllChanges);
+observer.observe(document.body, { childList: true, subtree: true });
+
+window.onload =  applyAllChanges;
 
 
 
