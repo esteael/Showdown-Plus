@@ -274,14 +274,39 @@ window.onload = applyAllChanges;
 // Accented
 // ...
 
-// Replace Meloetta with random pokemon, make this option toggleablle
+// Replace Meloetta with random pokemon, make this option toggleable
 // under the Showdown+ Category (createCustomCat).
+/*
+.roomcounters .usercount {
+  display: block;
+  width: 49px;
+  height: 63px;
+  position: absolute;
+  left: -30px;
+  bottom: -5px;
+  background: url(https://play.pokemonshowdown.com/sprites/gen5/meloetta.png) center no-repeat
+}
+
+.roomcounters button:hover .usercount {
+  background: url(https://play.pokemonshowdown.com/sprites/gen5ani/meloetta.gif) center no-repeat
+}
+
+.roomcounters .battlecount {
+  display: block;
+  width: 46px;
+  height: 76px;
+  position: absolute;
+  right: -30px;
+  bottom: -10px;
+  background: url(https://play.pokemonshowdown.com/sprites/gen5/meloetta-pirouette.png) center no-repeat
+}
+
+.roomcounters button:hover .battlecount {
+  background: url(https://play.pokemonshowdown.com/sprites/gen5ani/meloetta-pirouette.gif) center no-repeat
+}
+*/
 
 // Auto-Close "News."
-
-// Replace the site's favicon with our own. (I think we need to
-// update to a different manifest version to do this, but I might
-// wrong.)
 
 // Properly implement the avatar changing system. Save all avatars
 // to a backup folder, and delete them whenever the user presses
@@ -290,8 +315,6 @@ window.onload = applyAllChanges;
 // to put the "next" avatar.
 
 // Add way to add custom accent colors.
-
-// Upgrade from Manifest 2.0
 
 // Add support for custom avatars.
 
