@@ -1,34 +1,44 @@
-window.onload =  function() {
-  UIManager.replaceLogo();
-  UIManager.makeBarSmaller();
-  UIManager.adjustTabBarMargin();
-  UIManager.adjustPsRoomTop();
-  UIManager.removeColorPreview();
-  UIManager.addAvatarButton();
-  UIManager.createCustomCat();
-  UIManager.addCustomButton();
+import { UIManager  }           from "./ui/UIManager";
+import { userPrefManager }       from "./userPref/userPrefManager";
+import { battleManager }       from "./pokemon/battleManager";
 
-  UIManager.saveColor('#ff0000');
-  UserPrefManager.changePlayerUsernameColor();
-  
-};
+const UIManager = new UIManager();
 
-const observer = new MutationObserver(function(mutationsList) {
-  mutationsList.forEach(function(mutation) {
-    if (mutation.type === 'childList') {
+const userPrefManager = new userPrefManager();
 
-      // call UIManager methods if certain elements are added to the DOM
-      //
-      // example:
-      // if (elementAddedCondition) {
-      // UIManager.addAvatarButton();
-      // example end
+const battleManager = new battleManager();
 
-    }
-  });
-});
 
+userPrefManager.changeTextColor();
+userPrefManager.changePlayerUsernameColor();
+
+UIManager.replaceLogo();
+UIManager.makeBarSmaller();
+UIManager.adjustTabBarMargin();
+UIManager.adjustPsRoomTop();
+UIManager.removeColorPreview();
+UIManager.addAvatarButton();
+UIManager.addCustomColorButton();
+
+
+
+
+battleManager.ClickAnalysis();
+battleManager.pokemonClickListener();
+battleManager.injectScriptToSendCommands();
+battleManager.addPlayersRatingToName();
+battleManager.customizeTrainerBox();
+
+function applyAllChanges() {
+  UIManager.applyAllChanges();
+  userPrefManager.applyAllChanges();
+  battleManager.applyAllChanges();
+}
+
+const observer = new MutationObserver(applyAllChanges);
 observer.observe(document.body, { childList: true, subtree: true });
+
+window.onload =  applyAllChanges;
 
 
 
