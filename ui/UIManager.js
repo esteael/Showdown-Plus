@@ -1,4 +1,4 @@
-window.UIManager = (function() {
+const UIManager = (function() {
 
   // util function to get element and call a callback with it
 
@@ -124,6 +124,8 @@ window.UIManager = (function() {
   }
 
   return {
+    saveColor: saveColor,
+    changeTextColor: changeTextColor,
     replaceLogo: replaceLogo,
     makeBarSmaller: makeBarSmaller,
     adjustTabBarMargin: adjustTabBarMargin,

@@ -1,4 +1,4 @@
- window.BattleManager = (function() {
+const BattleManager = (function() {
   function queryAndApply(selector, callback) {
       document.querySelectorAll(selector).forEach(callback);
   }

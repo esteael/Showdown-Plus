@@ -1,15 +1,15 @@
 window.onload =  function() {
-  window.UIManager.replaceLogo();
-  window.UIManager.makeBarSmaller();
-  window.UIManager.adjustTabBarMargin();
-  window.UIManager.adjustPsRoomTop();
-  window.UIManager.removeColorPreview();
-  window.UIManager.addAvatarButton();
-  window.UIManager.createCustomCat();
-  window.UIManager.addCustomButton();
+  UIManager.replaceLogo();
+  UIManager.makeBarSmaller();
+  UIManager.adjustTabBarMargin();
+  UIManager.adjustPsRoomTop();
+  UIManager.removeColorPreview();
+  UIManager.addAvatarButton();
+  UIManager.createCustomCat();
+  UIManager.addCustomButton();
 
-  window.UserPrefManager.saveColor('#ff0000');
-  window.UserPrefManager.changePlayerUsernameColor();
+  UserPrefManager.saveColor('#ff0000');
+  UserPrefManager.changePlayerUsernameColor();
   
 };
 

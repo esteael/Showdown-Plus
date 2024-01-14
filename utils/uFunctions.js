@@ -1,4 +1,4 @@
-window.UFunctions = (function() {
+const UFunctions = (function() {
     function queryAndApply(selector, callback) {
         document.querySelectorAll(selector).forEach(callback);
     }

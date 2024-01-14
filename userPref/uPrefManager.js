@@ -1,4 +1,4 @@
- window.UserPrefManager = (function() {
+const UserPrefManager = (function() {
     function queryAndApply(selector, callback) {
         document.querySelectorAll(selector).forEach(callback);
     }
