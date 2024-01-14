@@ -9,30 +9,13 @@ const userPrefManager = new userPrefManager();
 const battleManager = new battleManager();
 
 
+uiManager.replaceLogo();
 userPrefManager.changeTextColor();
-userPrefManager.changePlayerUsernameColor();
-
-UIManager.replaceLogo();
-UIManager.makeBarSmaller();
-UIManager.adjustTabBarMargin();
-UIManager.adjustPsRoomTop();
-UIManager.removeColorPreview();
-UIManager.addAvatarButton();
-UIManager.addCustomColorButton();
-
-
-
-
 battleManager.ClickAnalysis();
 battleManager.pokemonClickListener();
-battleManager.injectScriptToSendCommands();
-battleManager.addPlayersRatingToName();
-battleManager.customizeTrainerBox();
 
 function applyAllChanges() {
-  UIManager.applyAllChanges();
-  userPrefManager.applyAllChanges();
-  battleManager.applyAllChanges();
+  uiManager.applyAllChanges();
 }
 
 const observer = new MutationObserver(applyAllChanges);
