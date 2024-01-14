@@ -8,7 +8,7 @@ window.onload =  function() {
   UIManager.createCustomCat();
   UIManager.addCustomButton();
 
-  UserPrefManager.saveColor('#ff0000');
+  UIManager.saveColor('#ff0000');
   UserPrefManager.changePlayerUsernameColor();
   
 };
