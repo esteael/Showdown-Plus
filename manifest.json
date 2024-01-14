@@ -1,22 +1,22 @@
 {
-    "manifest_version": 2,
-    "name": "Showdown+",
-    "version": "1.0",
-    "description": "A quality of life extension for Pokémon Showdown.",
-    "permissions": ["activeTab"],
-    "content_scripts": [
-        {
-            "matches": ["https://play.pokemonshowdown.com/*"],
-            "js": [
-              "utils/uFunctions.js", "ui/UIManager.js", "userPref/uPrefManager.js", "pokemon/battleManager.js", "content.js"
-          ],
-          "run_at": "document_idle"
-        }
-    ],
-    "icons": {
-        "48": "icon.png"
-    },
-    "web_accessible_resources": [
-        "showdownlogo.svg"
-    ]
-  }
+  "manifest_version": 2,
+  "name": "Showdown+",
+  "version": "1.0",
+  "description": "A quality of life extension for Pokémon Showdown.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+      {
+          "matches": ["https://play.pokemonshowdown.com/*"],
+          "js": [
+            "content.js", "ui/UIManager.js", "pokemon/battleManager.js", "userPref/uPrefManager.js", "utils/uFunctions.js"
+        ],
+        "run_at": "document_idle"
+      }
+  ],
+  "icons": {
+      "48": "icon.png"
+  },
+  "web_accessible_resources": [
+      "showdownlogo.svg"
+  ]
+}

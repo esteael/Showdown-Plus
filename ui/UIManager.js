@@ -109,7 +109,7 @@ window.UIManager = (function() {
               colorPicker.className = 'custom-color-picker';
               colorPicker.value = localStorage.getItem('usernametextColor') || '#FFFFFF';
               colorPicker.addEventListener('input', function() {
-                  UserPrefManager.saveColor(colorPicker.value);
+                  saveColor(colorPicker.value);
               });
               const pickerLabel = document.createElement('label');
               pickerLabel.className = 'optlabel';
