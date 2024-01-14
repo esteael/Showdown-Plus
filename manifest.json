@@ -7,10 +7,7 @@
   "content_scripts": [
       {
           "matches": ["https://play.pokemonshowdown.com/*"],
-          "js": [
-            "content.js", "UIManager.js", "battleManager.js", "uPrefManager.js", "uFunctions.js"
-        ],
-        "run_at": "document_idle"
+          "js": ["content.js", "UIManager.js", "battleManager.js", "uPrefManager.js", "uFunctions.js"]
       }
   ],
   "icons": {
