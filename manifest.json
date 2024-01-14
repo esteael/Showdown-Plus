@@ -8,7 +8,7 @@
       {
           "matches": ["https://play.pokemonshowdown.com/*"],
           "js": [
-            "content.js", "ui/UIManager.js", "pokemon/battleManager.js", "userPref/uPrefManager.js", "utils/uFunctions.js"
+            "content.js", "UIManager.js", "battleManager.js", "uPrefManager.js", "uFunctions.js"
         ],
         "run_at": "document_idle"
       }
