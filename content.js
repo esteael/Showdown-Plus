@@ -25,6 +25,22 @@ function replaceLogo() {
   }
 }
 
+function replaceFavicon() {
+  const newFaviconURL = chrome.runtime.getURL('favicon.ico');
+
+  const existingFavicons = document.querySelectorAll("link[rel='icon'], link[rel='shortcut icon']");
+  existingFavicons.forEach(favicon => favicon.remove());
+
+  const newFavicon = document.createElement('link');
+  newFavicon.rel = 'icon';
+  newFavicon.href = newFaviconURL;
+  newFavicon.sizes = '256x256';
+
+  document.head.appendChild(newFavicon);
+}
+
+window.addEventListener('load', replaceFavicon);
+
 function makeBarSmaller() {
   var tabBar = document.querySelector('.maintabbarbottom');
   if (tabBar) {
