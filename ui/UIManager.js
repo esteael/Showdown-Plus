@@ -96,38 +96,6 @@ export class UIManager {
           }        
     }
 
-    addCustomButton() {
-        if (document.querySelector('.custom-color-picker')) {
-            return;
-          }
-        
-          var chatPreferencesLabel = Array.from(document.querySelectorAll('.ps-popup p label.optlabel'))
-              .find(label => label.textContent.includes('Chat preferences:'));
-        
-          if (chatPreferencesLabel) {
-            const colorPicker = document.createElement('input');
-            colorPicker.type = 'color';
-            colorPicker.className = 'custom-color-picker';
-            colorPicker.value = localStorage.getItem('usernametextColor') || '#FFFFFF';
-            colorPicker.style.background = 'none';
-            colorPicker.style.border = 'none';
-            colorPicker.style.boxShadow = 'none';
-            colorPicker.addEventListener('input', () => {
-              saveColor(colorPicker.value);
-            });
-            const pickerLabel = document.createElement('label');
-            pickerLabel.className = 'optlabel';
-            pickerLabel.style.display = 'flex';
-            pickerLabel.style.alignItems = 'center';
-            pickerLabel.textContent = 'Username color: ';
-            pickerLabel.appendChild(colorPicker);
-            colorPicker.style.marginLeft = '-1px';
-            const pickerParagraph = document.createElement('p');
-            pickerParagraph.appendChild(pickerLabel);
-            chatPreferencesLabel.parentNode.parentNode.insertBefore(pickerParagraph, chatPreferencesLabel.parentNode.nextSibling);
-          }        
-    }
-
 
 
 }
