@@ -269,12 +269,15 @@ const observer = new MutationObserver(applyAllChanges);
 observer.observe(document.body, { childList: true, subtree: true });
 window.onload = applyAllChanges;
 
-// Add Showdown+ Custom Backgrounds.
-// Solid Grey
-// Accented
-// ...
+// Add Showdown+ Custom Backgrounds. (super easy, settings > change bg button)
+// <button name="setBg" value="solidblue" class="option"><span class="bg" style="background: #344b6c"></span>Solid blue</button>
+// use this line to create a 3 new boxes under it with 3 different new backgrouds.
 
-// Replace Meloetta with random pokemon, make this option toggleable
+// "Showdown" Grey (#151515)
+// Customizable CSS Moving Gradient (maybe??)
+// Customizable Solid (???)
+
+// Replace Meloetta with random pokemon, make this option toggleable (MAKE THIS A CHECKBOX UNDER CUSTOMCAT)
 // under the Showdown+ Category (createCustomCat).
 /*
 .roomcounters .usercount {
@@ -306,22 +309,23 @@ window.onload = applyAllChanges;
 }
 */
 
-// Auto-Close "News."
+// Auto-Close "News." News auto opens when the site opens, add a checkbox that auto closes
+// the news when the site starts. (Harder)
 
+
+// Add support for custom avatars. (ignore this for now)
 // Properly implement the avatar changing system. Save all avatars
 // to a backup folder, and delete them whenever the user presses
 // the "fa fa-trash" icon next to it in the menu. We can use the 
 // button on the bottom of the screen to tell the program where
-// to put the "next" avatar.
+// to put the "next" avatar. (ignore this for now)
 
-// Add way to add custom accent colors.
+// Add way to add custom accent colors. (ignore this for now)
 
-// Add support for custom avatars.
+// Smogon+. (Hard to explain, leave this to lana)
 
-// Smogon+.
+// Custom Command Support. (Hard to explain dw ab it for now)
 
-// Custom Command Support.
+// Self Team Analysis button. (Leave to lana)
 
-// Self Analysis button.
-
-// Black and White Scaling
+// Black and White Scaling (leave to lana)
