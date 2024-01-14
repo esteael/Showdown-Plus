@@ -57,5 +57,3 @@
         changePlayerUsernameColor: changePlayerUsernameColor
     };
 })();
-
-console.log('UserPrefManager loaded:', window.UserPrefManager);
