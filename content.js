@@ -114,31 +114,24 @@ function createCustomCat() {
     return;
   }
 
-  var chatPreferencesLabel = Array.from(document.querySelectorAll('.ps-popup p label.optlabel'))
+  const chatPreferencesLabel = Array.from(document.querySelectorAll('.ps-popup p label.optlabel'))
       .find(label => label.textContent.includes('Chat preferences:'));
 
   if (chatPreferencesLabel) {
+    // Create the Showdown+ category and horizontal rule
     const hr = document.createElement('hr');
     const showdownParagraph = document.createElement('p');
     showdownParagraph.className = 'custom-cat';
     const showdownStrong = document.createElement('strong');
     showdownStrong.textContent = 'Showdown+';
     showdownParagraph.appendChild(showdownStrong);
+
+    // Insert Showdown+ paragraph and hr
     const chatPreferencesParent = chatPreferencesLabel.parentNode;
     chatPreferencesParent.parentNode.insertBefore(showdownParagraph, chatPreferencesParent.nextSibling);
     chatPreferencesParent.parentNode.insertBefore(hr, showdownParagraph);
-  }
-}
 
-function addCustomButton() {
-  if (document.querySelector('.custom-color-picker')) {
-    return;
-  }
-
-  var chatPreferencesLabel = Array.from(document.querySelectorAll('.ps-popup p label.optlabel'))
-      .find(label => label.textContent.includes('Chat preferences:'));
-
-  if (chatPreferencesLabel) {
+    // Create and add the custom color picker
     const colorPicker = document.createElement('input');
     colorPicker.type = 'color';
     colorPicker.className = 'custom-color-picker';
@@ -149,18 +142,33 @@ function addCustomButton() {
     colorPicker.addEventListener('input', () => {
       saveColor(colorPicker.value);
     });
+
     const pickerLabel = document.createElement('label');
     pickerLabel.className = 'optlabel';
     pickerLabel.style.display = 'flex';
     pickerLabel.style.alignItems = 'center';
     pickerLabel.textContent = 'Username color: ';
     pickerLabel.appendChild(colorPicker);
-    colorPicker.style.marginLeft = '-1px';
     const pickerParagraph = document.createElement('p');
     pickerParagraph.appendChild(pickerLabel);
-    chatPreferencesLabel.parentNode.parentNode.insertBefore(pickerParagraph, chatPreferencesLabel.parentNode.nextSibling);
+
+    // Insert the color picker paragraph
+    showdownParagraph.parentNode.insertBefore(pickerParagraph, showdownParagraph.nextSibling);
+
+    // Create and add the Auto-Close News checkbox
+    const autoCloseNewsLabel = document.createElement('label');
+    autoCloseNewsLabel.className = 'checkbox';
+    const autoCloseNewsCheckbox = document.createElement('input');
+    autoCloseNewsCheckbox.type = 'checkbox';
+    autoCloseNewsCheckbox.name = 'autoCloseNews';
+    autoCloseNewsLabel.appendChild(autoCloseNewsCheckbox);
+    autoCloseNewsLabel.appendChild(document.createTextNode(' Auto-Close News'));
+
+    // Insert the checkbox paragraph
+    pickerParagraph.parentNode.insertBefore(autoCloseNewsLabel, pickerParagraph.nextSibling);
   }
 }
+
 
 function changePlayerUsernameColor() {
   queryAndApply('.trainer strong', playerUsername => {
@@ -251,7 +259,6 @@ function addPlayersRatingToName() {
 
 function applyAllChanges() {
   replaceLogo();
-  addCustomButton();
   changeTextColor();
   removeColorPreview();
   changeBarColorsAndBorders();
