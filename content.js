@@ -118,7 +118,6 @@ function createCustomCat() {
       .find(label => label.textContent.includes('Chat preferences:'));
 
   if (chatPreferencesLabel) {
-    // Create the Showdown+ category and horizontal rule
     const hr = document.createElement('hr');
     const showdownParagraph = document.createElement('p');
     showdownParagraph.className = 'custom-cat';
@@ -126,12 +125,10 @@ function createCustomCat() {
     showdownStrong.textContent = 'Showdown+';
     showdownParagraph.appendChild(showdownStrong);
 
-    // Insert Showdown+ paragraph and hr
     const chatPreferencesParent = chatPreferencesLabel.parentNode;
     chatPreferencesParent.parentNode.insertBefore(showdownParagraph, chatPreferencesParent.nextSibling);
     chatPreferencesParent.parentNode.insertBefore(hr, showdownParagraph);
 
-    // Create and add the custom color picker
     const colorPicker = document.createElement('input');
     colorPicker.type = 'color';
     colorPicker.className = 'custom-color-picker';
@@ -152,10 +149,17 @@ function createCustomCat() {
     const pickerParagraph = document.createElement('p');
     pickerParagraph.appendChild(pickerLabel);
 
-    // Insert the color picker paragraph
     showdownParagraph.parentNode.insertBefore(pickerParagraph, showdownParagraph.nextSibling);
 
-    // Create and add the Auto-Close News checkbox
+      // We need to add functionality to this button. The button should in
+      // theory but looking for either using the actual "close" button to outright
+      // close the news section by "pressing the button" which we can do by
+      // physically locating the button on the page or logging the console
+      // and then just replicating the results whenever we launch the page
+      // and adding it to our DOM on-page rules.
+      // The second option, is to just delete the news tab outright whenever
+      // the page loads. I don't like this one because it seems too destructive
+      // but in theory it should be fine, I'll probably try this one first.
     const autoCloseNewsLabel = document.createElement('label');
     autoCloseNewsLabel.className = 'checkbox';
     const autoCloseNewsCheckbox = document.createElement('input');
@@ -164,7 +168,6 @@ function createCustomCat() {
     autoCloseNewsLabel.appendChild(autoCloseNewsCheckbox);
     autoCloseNewsLabel.appendChild(document.createTextNode(' Auto-Close News'));
 
-    // Insert the checkbox paragraph
     pickerParagraph.parentNode.insertBefore(autoCloseNewsLabel, pickerParagraph.nextSibling);
   }
 }
